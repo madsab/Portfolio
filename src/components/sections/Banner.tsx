@@ -1,5 +1,5 @@
 import React from "react";
-import { Reveal } from "../animation/Reveal";
+import Reveal from "../animation/Reveal";
 
 const Banner = () => {
   return (
