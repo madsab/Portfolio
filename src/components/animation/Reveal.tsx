@@ -7,7 +7,7 @@ interface Props {
   width?: "fit-content" | "100%";
 }
 
-export const Reveal = ({ children, width = "fit-content" }: Props) => {
+const Reveal = ({ children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -54,3 +54,5 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     </div>
   );
 };
+
+export default Reveal;
