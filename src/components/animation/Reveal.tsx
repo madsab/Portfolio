@@ -1,4 +1,3 @@
-import { once } from "events";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -48,6 +47,7 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
           left: 0,
           right: 0,
           background: "#222138",
+          borderRadius: "10px",
           zIndex: "20",
         }}
       />
