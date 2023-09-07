@@ -4,9 +4,18 @@ import React, { useEffect, useRef } from "react";
 interface Props {
   children: JSX.Element;
   width?: "fit-content" | "100%";
+  downwards?: boolean;
+  slider?: boolean;
+  delay?: number;
 }
 
-const Reveal = ({ children, width = "fit-content" }: Props) => {
+const Reveal = ({
+  children,
+  width = "fit-content",
+  downwards = false,
+  slider = true,
+  delay = 0.25,
+}: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -16,19 +25,21 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
   useEffect(() => {
     if (isInView) {
       mainController.start("visible");
-      slideController.start("visible");
+      slider
+        ? slideController.start("visible")
+        : slideController.start("hidden");
     }
   }, [isInView]);
   return (
     <div ref={ref} style={{ position: "relative", overflow: "hidden", width }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
+          hidden: { opacity: 0, y: downwards ? -75 : 75 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainController}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.5, delay: delay }}
       >
         {children}
       </motion.div>
@@ -42,6 +53,7 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
         transition={{ duration: 0.5, ease: "easeIn" }}
         style={{
           position: "absolute",
+          display: slider ? "block" : "none",
           top: 4,
           bottom: 4,
           left: 0,
