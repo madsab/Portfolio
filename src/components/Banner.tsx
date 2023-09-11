@@ -12,7 +12,7 @@ const Banner = () => {
         <Reveal>
           <p className="text-3xl">
             I&apos;m Mads, a{" "}
-            <span className="text-theme-lightgray">Fronted Developer</span>
+            <span className="text-theme-lightgray">Frontend Developer</span>
           </p>
         </Reveal>
         <Reveal>
@@ -24,7 +24,9 @@ const Banner = () => {
           </p>
         </Reveal>
         <Reveal>
-          <Button>Hey på deg</Button>
+          <Button>
+            <span className="text-xl">Hey på deg</span>
+          </Button>
         </Reveal>
       </div>
     </section>
