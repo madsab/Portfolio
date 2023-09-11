@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         'BgHomeOfficeRain' : "url(./assets/img/Bg_HomeOfficeRain.gif)",
+        'Sifu' : "url(./assets/img/sifuStaff.png)"
       },
       colors:{
         'theme-gray': "#484854",
