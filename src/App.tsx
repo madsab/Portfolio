@@ -6,9 +6,12 @@ import SifuBg from "./assets/img/sifuStaff.png";
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-theme-gray to-theme-brown text-white">
+    <div
+      id="top"
+      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white"
+    >
       <Navbar />
-      <img
+      {/* <img
         className="absolute"
         src={SifuBg}
         style={{
@@ -18,7 +21,8 @@ function App() {
           overflow: "scroll",
         }}
         alt="Sifu character"
-      />
+      /> */}
+
       <Banner />
       <Projects />
     </div>
