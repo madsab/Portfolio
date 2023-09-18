@@ -28,7 +28,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center" id="projects">
       <p className="text-5xl mb-3 font-bold">My Projects</p>
       <div className="border-2 rounded-xl w-[90%] flex flex-wrap shadow-2xl">
         {projects.map((p, index) => {
