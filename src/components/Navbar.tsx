@@ -3,8 +3,8 @@ import Button from "./atoms/Button";
 import Reveal from "./animation/Reveal";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import githubLogo from "../assets/img/github-mark-white.svg";
-import linkdnLogo from "../assets/img/linkdnLogo.png";
+import githubLogo from "../assets/img/Github_logo_white.svg";
+import linkdnLogo from "../assets/img/Linkdn_logo.png";
 import SifuIcon from "../assets/img/SifuIcon.svg";
 import Icon from "./atoms/Icon";
 import Link from "./atoms/Link";
