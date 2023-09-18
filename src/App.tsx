@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import SifuBg from "./assets/img/sifuStaff.png";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       /> */}
 
       <Banner />
+      <Skills />
       <Projects />
     </div>
   );
