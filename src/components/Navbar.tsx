@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Button from "./atoms/Button";
 import Reveal from "./animation/Reveal";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import githubLogo from "../assets/img/github-mark-white.svg";
 import linkdnLogo from "../assets/img/linkdnLogo.png";
 import SifuIcon from "../assets/img/SifuIcon.svg";
+import Icon from "./atoms/Icon";
+import Link from "./atoms/Link";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -30,25 +34,35 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 pr-6 pl-6 z-30 " style={navBarStyle}>
-      <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
-        <nav className="flex h-20 items-center">
-          <div className="grow flex space-x-10 items-center">
-            <div className="bg-slate-200 rounded-3xl overflow-hidden">
-              <img src={SifuIcon} alt="Sifu face" width={50} height={50} />
+      <Router>
+        <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
+          <nav className="flex h-20 items-center">
+            <div className="grow flex space-x-10 items-center ml-4">
+              <Link to="top" background="bg-slate-200">
+                <img src={SifuIcon} alt="Sifu face" width={50} height={50} />
+              </Link>
+              <Link to="about">About</Link>
+              <Link to="skills">Skills</Link>
+              <Link to="projects">Projects</Link>
             </div>
-            <p className="flex justify-center text-xl ">About</p>
-            <p className="flex justify-center text-xl">Skills</p>
-            <p className="flex justify-center text-xl">Projects</p>
-          </div>
-          <div className="grow flex justify-end">
-            <img src={linkdnLogo} alt="Linkdn logo" width={45} />
-            <img src={githubLogo} alt="Github logo" width={45} />
-            <Button>
-              <span className="text-2xl">Contact Me</span>
-            </Button>
-          </div>
-        </nav>
-      </Reveal>
+            <div className="grow flex justify-end space-x-4">
+              <Icon
+                src={githubLogo}
+                alt="Github logo"
+                link="https://github.com/madsab"
+              />
+              <Icon
+                src={linkdnLogo}
+                alt="Linkdn logo"
+                link="https://www.linkedin.com/in/mads-b%C3%A5rnes-a66b96272/"
+              />
+              <Button>
+                <span className="text-2xl">Contact Me</span>
+              </Button>
+            </div>
+          </nav>
+        </Reveal>
+      </Router>
     </div>
   );
 };
