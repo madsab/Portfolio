@@ -27,7 +27,7 @@ const Skills = () => {
     showSkill ? setSkill(false) : setSkill(true);
   };
   return (
-    <div className="flex flex-col items-center min-h-screen ">
+    <div className="flex flex-col items-center min-h-screen">
       <Reveal>
         <p className="text-6xl font-bold">Skills</p>
       </Reveal>
