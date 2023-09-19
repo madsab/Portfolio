@@ -21,6 +21,11 @@ const Skills = () => {
       icon: JsLogo,
       alt: "JavaScriptLogo",
     },
+    {
+      title: "Java",
+      icon: JavaLogo,
+      alt: "Java Logo",
+    },
   ];
 
   const showSkills = () => {
@@ -31,13 +36,13 @@ const Skills = () => {
       <Reveal>
         <p className="text-6xl font-bold">Skills</p>
       </Reveal>
-      <div className="w-[90%] overflow-hidden">
+      <div className=" relative w-[90%] overflow-hidden">
         <Reveal>
           <div className=" relative border-2 rounded-xl overflow-hidden shadow-md shadow-black">
             <img
               src={LaptopOutlinePC}
               alt="Outline of Laptop"
-              className="absolute z-10 left-[47%] top-[55%] hover:cursor-pointer w-[10.8%]"
+              className="absolute z-10 left-[47%] top-[55%] hover:cursor-pointer w-[10.8%] hover:opacity-75"
               onClick={showSkills}
             />
             <SkillWindow trigger={showSkill} aquiredSkills={aquiredSkills} />
