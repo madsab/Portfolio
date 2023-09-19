@@ -19,8 +19,8 @@ const PopUp = ({ children, fire = false }: Props) => {
   return (
     <motion.div
       variants={{
-        hidden: { scale: 0, opacity: 0, y: 150 },
-        visible: { scale: 1, opacity: 1, y: 0 },
+        hidden: { scaleX: 0, scaleY: 0.5, opacity: 0, y: 150 },
+        visible: { scaleX: 1, scaleY: 1, opacity: 1, y: 0 },
       }}
       initial="hidden"
       transition={{ duration: 0.3 }}
