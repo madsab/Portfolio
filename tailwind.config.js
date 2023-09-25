@@ -17,7 +17,7 @@ module.exports = {
         'theme-green': "#434340",
       },
       animation:{
-        "slider": "slide 10s linear infinite"
+        "slider": "slide 20s linear infinite"
       },
       keyframes:{
         slide: {
