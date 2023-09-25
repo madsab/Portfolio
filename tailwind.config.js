@@ -15,6 +15,15 @@ module.exports = {
         'theme-blue': "#222138",
         'theme-lightgray': "#746768",
         'theme-green': "#434340",
+      },
+      animation:{
+        "slider": "slide 10s linear infinite"
+      },
+      keyframes:{
+        slide: {
+          "from": {transform: "translateX(0)" },
+          "to": {transform: "translateX(-100%)"}
+        }
       }
     },
   },
