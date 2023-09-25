@@ -1,6 +1,7 @@
 import React from "react";
 import SkillCard from "../atoms/SkillCard";
 import PopUp from "../animation/PopUp";
+import SkillCarousel from "./SkillCarousel";
 
 interface Props {
   aquiredSkills: any[];
@@ -8,19 +9,13 @@ interface Props {
 }
 const SkillWindow = ({ aquiredSkills, trigger = false }: Props) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="absolute w-[50%]  left-[27%] top-[20%]">
       <PopUp fire={trigger}>
-        <div className="absolute w-[50%] top-[15%] left-[27.5%] bg-slate-950 shadow-md shadow-slate-400 rounded-lg h-[30%] flex items-center justify-center space-x-6">
-          {aquiredSkills.map((skill, index) => {
-            return (
-              <SkillCard
-                key={index}
-                title={skill.title}
-                icon={skill.icon}
-                alt={skill.alt}
-              />
-            );
-          })}
+        <div className="relative bg-slate-950 p-6 shadow-md shadow-slate-400 rounded-lg h-[30%] flex flex-col items-center justify-center">
+          <p className="text-2xl mb-5">My Programming Languages</p>
+          <div className="w-full ">
+            <SkillCarousel items={aquiredSkills} />
+          </div>
         </div>
       </PopUp>
     </div>

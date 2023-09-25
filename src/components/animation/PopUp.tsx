@@ -17,19 +17,17 @@ const PopUp = ({ children, fire = false }: Props) => {
     }
   });
   return (
-    <div>
-      <motion.div
-        variants={{
-          hidden: { display: "none", scale: 0, y: 400 },
-          visible: { display: "block", scale: 1, y: 300 },
-        }}
-        initial="hidden"
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        animate={Controller}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      variants={{
+        hidden: { scaleX: 0, scaleY: 0.5, opacity: 0, y: 150 },
+        visible: { scaleX: 1, scaleY: 1, opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      transition={{ duration: 0.3 }}
+      animate={Controller}
+    >
+      {children}
+    </motion.div>
   );
 };
 

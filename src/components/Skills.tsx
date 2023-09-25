@@ -5,21 +5,46 @@ import Reveal from "./animation/Reveal";
 
 import ReactLogo from "../assets/img/React_logo.svg";
 import JsLogo from "../assets/img/JavaScript_logo.svg";
+import TsLogo from "../assets/img/Typescript_logo.svg";
 import JavaLogo from "../assets/img/java-icon.svg";
+import CSSLogo from "../assets/img/CSS3_logo.svg";
+import HTML5Logo from "../assets/img/HTML5_logo.svg";
+import PythonLogo from "../assets/img/Python-logo.svg";
+
 import SkillWindow from "./organisms/SkillWindow";
 
 const Skills = () => {
   const [showSkill, setSkill] = useState(false);
   const aquiredSkills = [
     {
-      title: "React",
-      icon: ReactLogo,
-      alt: "ReactLogo",
-    },
-    {
       title: "JavaScript",
       icon: JsLogo,
       alt: "JavaScriptLogo",
+    },
+    {
+      title: "TypeScript",
+      icon: TsLogo,
+      alt: "TypeScriptLogo",
+    },
+    {
+      title: "Java",
+      icon: JavaLogo,
+      alt: "Java Logo",
+    },
+    {
+      title: "HTML5",
+      icon: HTML5Logo,
+      alt: "HTML5 logo",
+    },
+    {
+      title: "CSS",
+      icon: CSSLogo,
+      alt: "CSS3 logo",
+    },
+    {
+      title: "Python",
+      icon: PythonLogo,
+      alt: "Python logo",
     },
   ];
 
@@ -31,13 +56,13 @@ const Skills = () => {
       <Reveal>
         <p className="text-6xl font-bold">Skills</p>
       </Reveal>
-      <div className="w-[90%] overflow-hidden">
+      <div className=" relative w-[90%] overflow-hidden">
         <Reveal>
           <div className=" relative border-2 rounded-xl overflow-hidden shadow-md shadow-black">
             <img
               src={LaptopOutlinePC}
               alt="Outline of Laptop"
-              className="absolute z-10 left-[47%] top-[55%] hover:cursor-pointer w-[10.8%]"
+              className="absolute z-10 left-[47%] top-[55%] hover:cursor-pointer w-[10.8%] hover:opacity-75"
               onClick={showSkills}
             />
             <SkillWindow trigger={showSkill} aquiredSkills={aquiredSkills} />
