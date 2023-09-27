@@ -2,7 +2,6 @@ import React from "react";
 import Reveal from "./animation/Reveal";
 
 import CVPhoto from "../assets/img/CvPhoto.jpg";
-import Link from "./atoms/Link";
 
 const About = () => {
   return (
