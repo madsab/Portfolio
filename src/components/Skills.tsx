@@ -8,6 +8,7 @@ import ReactLogo from "../assets/img/React_logo.svg";
 import AWSLogo from "../assets/img/Amazon_Web_Services_Logo.svg";
 import NextJsLogo from "../assets/img/next-js.jpg";
 import StoryBookLogo from "../assets/img/storybook-logo.png";
+import TailwindLogo from "../assets/img/Tailwind_CSS_Logo.svg";
 
 import JsLogo from "../assets/img/JavaScript_logo.svg";
 import TsLogo from "../assets/img/Typescript_logo.svg";
@@ -42,6 +43,11 @@ const Skills = () => {
       title: "Storybook",
       icon: StoryBookLogo,
       alt: "Storybook logo",
+    },
+    {
+      title: "TalwindCSS",
+      icon: TailwindLogo,
+      alt: "Talwindcss logo",
     },
   ];
 
@@ -88,7 +94,7 @@ const Skills = () => {
     showSkill ? setSkill(false) : setSkill(true);
   };
   return (
-    <div id="skills" className="flex flex-col items-center min-h-screen">
+    <div id="skills" className="flex flex-col items-center min-h-screen mb-10">
       <Reveal>
         <p className="text-6xl font-bold">Skills</p>
       </Reveal>
