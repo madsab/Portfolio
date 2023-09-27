@@ -7,7 +7,6 @@ module.exports = {
     extend: {
       backgroundImage:{
         'BgHomeOfficeRain' : "url(./assets/img/Bg_HomeOfficeRain.gif)",
-        'Sifu' : "url(./assets/img/sifuStaff.png)"
       },
       colors:{
         'theme-gray': "#484854",
@@ -24,6 +23,9 @@ module.exports = {
           "from": {transform: "translateX(0)" },
           "to": {transform: "translateX(-100%)"}
         }
+      },
+      boxShadow:{
+        "3xl": "5px 5px 20px 5px rgba(50,50,50,0.5)"
       }
     },
   },
