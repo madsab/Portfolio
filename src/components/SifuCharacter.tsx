@@ -4,7 +4,7 @@ import SifuBg from "../assets/img/SifuStaff.png";
 const SifuCharacter = () => {
   return (
     <img
-      className="absolute min-w-fit -z-9 "
+      className="absolute top-0 left-0  min-w-fit "
       src={SifuBg}
       alt="Sifu character"
     />
