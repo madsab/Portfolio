@@ -2,29 +2,20 @@ import React, { useState } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import SifuBg from "./assets/img/sifuStaff.png";
 import Skills from "./components/Skills";
 import PopUp from "./components/animation/PopUp";
+import SifuCharacter from "./components/SifuCharacter";
+import About from "./components/About";
 
 function App() {
   const [trigger, setTrigger] = useState(true);
   return (
     <div
       id="top"
-      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white"
+      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white "
     >
+      <SifuCharacter />
       <Navbar />
-      {/* <img
-        className="absolute"
-        src={SifuBg}
-        style={{
-          aspectRatio: "2/2",
-          height: "500vh",
-          left: "20vw",
-          overflow: "scroll",
-        }}
-        alt="Sifu character"
-      /> */}
       <div className=" sticky top-[30%] left-[15%] z-30 ">
         <PopUp fire={trigger}>
           <div className="bg-black rounded-lg flex flex-col items-center justify-center p-10 space-y-5">
@@ -45,6 +36,7 @@ function App() {
       </div>
 
       <Banner />
+      <About />
       <Skills />
       <Projects />
     </div>
