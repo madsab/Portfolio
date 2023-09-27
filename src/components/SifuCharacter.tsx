@@ -1,5 +1,5 @@
 import React from "react";
-import SifuBg from "../assets/img/SifuStaff.png";
+import SifuBg from "../assets/img/sifuStaff.png";
 
 const SifuCharacter = () => {
   return (
