@@ -1,5 +1,6 @@
 import React from "react";
 import Reveal from "./animation/Reveal";
+import Link from "./atoms/Link";
 import Button from "./atoms/Button";
 
 const Banner = () => {
@@ -24,9 +25,11 @@ const Banner = () => {
           </p>
         </Reveal>
         <Reveal>
-          <Button>
-            <span className="text-xl">I don&apos;t bite</span>
-          </Button>
+          <Link to="contact" scale={false}>
+            <Button>
+              <span className="text-xl">I don&apos;t bite</span>
+            </Button>
+          </Link>
         </Reveal>
       </div>
     </section>
