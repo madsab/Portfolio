@@ -11,7 +11,7 @@ function App() {
   return (
     <div
       id="top"
-      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white "
+      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white box-border overflow-y-hidden "
     >
       <SifuCharacter />
       <Navbar />
