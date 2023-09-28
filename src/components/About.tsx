@@ -5,7 +5,10 @@ import CVPhoto from "../assets/img/CvPhoto.jpg";
 
 const About = () => {
   return (
-    <div className=" z-10 w-full min-h-screen bg-black flex items-center pr-8 justify-evenly">
+    <div
+      id="about"
+      className=" z-10 w-full min-h-screen bg-black flex items-center pr-8 justify-evenly"
+    >
       <div className="z-10 flex w-[40%] pl-8">
         <Reveal width="fit-content">
           <img
