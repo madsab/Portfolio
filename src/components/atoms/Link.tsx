@@ -5,8 +5,10 @@ interface Props {
   to: string;
   children: JSX.Element | string;
   background?: string;
+  scale?: boolean;
 }
-const Link = ({ to, background, children }: Props) => {
+const Link = ({ to, background, children, scale = true }: Props) => {
+  const isScaling = scale ? "hover:scale-125" : "";
   return (
     <LinkReact
       to={to}
@@ -14,10 +16,9 @@ const Link = ({ to, background, children }: Props) => {
       spy={true}
       smooth={true}
       duration={500}
-      className={
-        "rounded-full overflow-hidden hover:cursor-pointer hover:scale-125 " +
-        background
-      }
+      className={`rounded-full overflow-hidden cursor-pointer ${
+        background + " " + isScaling
+      }`}
     >
       {children}
     </LinkReact>
