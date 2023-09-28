@@ -23,7 +23,10 @@ const Projects = () => {
   ];
 
   return (
-    <div className=" w-full flex flex-col items-center" id="projects">
+    <div
+      className=" w-full min-h-screen bg-black flex flex-col items-center justify-center"
+      id="projects"
+    >
       <Reveal>
         <p className="text-5xl mb-3 font-bold">My Projects</p>
       </Reveal>
