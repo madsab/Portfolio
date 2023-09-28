@@ -56,9 +56,11 @@ const Navbar = () => {
                 alt="Linkdn logo"
                 link="https://www.linkedin.com/in/mads-b%C3%A5rnes-a66b96272/"
               />
-              <Button>
-                <span className="text-2xl">Contact Me</span>
-              </Button>
+              <Link to="contact" scale={false}>
+                <Button>
+                  <span className="text-2xl">Contact Me</span>
+                </Button>
+              </Link>
             </div>
           </nav>
         </Reveal>
