@@ -12,11 +12,11 @@ function App() {
   return (
     <div
       id="top"
-      className="bg-gradient-to-r from-theme-gray to-theme-brown text-white box-border overflow-y-hidden "
+      className=" relative overflow-x-clip bg-gradient-to-r from-theme-gray to-theme-brown text-white w-full "
     >
       <SifuCharacter />
       <Navbar />
-      <div className=" sticky top-[30%] left-[15%] z-30 ">
+      <div className=" sticky top-[30%] z-50">
         <PopUp fire={trigger}>
           <div className="bg-black rounded-lg flex flex-col items-center justify-center p-10 space-y-5">
             <p className="text-6xl">UNDER CONSTRUCTION!</p>
