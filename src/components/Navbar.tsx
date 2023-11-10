@@ -57,7 +57,9 @@ const Navbar = () => {
                 link="https://www.linkedin.com/in/mads-b%C3%A5rnes-a66b96272/"
               />
               <Button>
-                <span className="text-2xl">Contact Me</span>
+                <span className="text-2xl">
+                  <a href="mailto:mads.barnes@hotmail.com">Contact Me</a>
+                </span>
               </Button>
             </div>
           </nav>
