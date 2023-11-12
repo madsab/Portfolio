@@ -12,29 +12,9 @@ function App() {
   return (
     <div
       id="top"
-      className=" relative overflow-x-clip bg-gradient-to-r from-theme-gray to-theme-brown text-white w-full "
+      className=" relative overflow-x-clip bg-gradient-to-r from-theme-gray to-theme-brown text-theme-text w-full "
     >
-      <SifuCharacter />
       <Navbar />
-      <div className=" sticky top-[30%] z-50">
-        <PopUp fire={trigger}>
-          <div className="bg-black rounded-lg flex flex-col items-center justify-center p-10 space-y-5">
-            <p className="text-6xl">UNDER CONSTRUCTION!</p>
-            <p>
-              This site is currently under construction. Because of this some
-              features may not be complete or not been added. More updates
-              coming soon
-            </p>
-            <button
-              className="border-2 p-3 rounded-lg"
-              onClick={() => setTrigger(false)}
-            >
-              Close
-            </button>
-          </div>
-        </PopUp>
-      </div>
-
       <Banner />
       <About />
       <Skills />
