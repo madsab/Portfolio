@@ -18,7 +18,6 @@ const Reveal = ({
 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const mainController = useAnimation();
   const slideController = useAnimation();
 
@@ -29,7 +28,7 @@ const Reveal = ({
         ? slideController.start("visible")
         : slideController.start("hidden");
     }
-  }, [isInView]);
+  }, [isInView, mainController, slideController, slider]);
   return (
     <div ref={ref} style={{ position: "relative", overflow: "hidden", width }}>
       <motion.div
