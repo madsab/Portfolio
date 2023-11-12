@@ -1,12 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link as LinkReact } from "react-scroll";
+import cn from "classnames";
 
-interface Props {
+interface LinkProps {
   to: string;
   children: JSX.Element | string;
-  background?: string;
+  className?: string;
+  animation?: boolean;
 }
-const Link = ({ to, background, children }: Props) => {
+const Link: FC<LinkProps> = ({ to, animation = true, children, className }) => {
   return (
     <LinkReact
       to={to}
@@ -14,12 +16,12 @@ const Link = ({ to, background, children }: Props) => {
       spy={true}
       smooth={true}
       duration={500}
-      className={
-        "rounded-full overflow-hidden hover:cursor-pointer hover:scale-125 " +
-        background
-      }
+      className={cn("cursor-pointer group transition duration-300", className)}
     >
       {children}
+      {animation && (
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-theme-text"></span>
+      )}
     </LinkReact>
   );
 };
