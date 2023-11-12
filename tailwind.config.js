@@ -5,15 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        'BgHomeOfficeRain' : "url(./assets/img/Bg_HomeOfficeRain.gif)",
-      },
       colors:{
-        'theme-gray': "#484854",
-        'theme-brown': "#4F4944",
-        'theme-blue': "#222138",
-        'theme-lightgray': "#746768",
-        'theme-green': "#434340",
+        'theme-bg': "#070303",
+        'theme-text': "#F6F1DF",
+        'theme-accent': "#B94341",
+        'theme-primary': "#761614",
+        'theme-secondary': "#220C0C",
       },
       animation:{
         "slider": "slide 20s linear infinite"
