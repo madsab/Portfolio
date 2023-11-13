@@ -2,22 +2,19 @@ import React from "react";
 import ProjectCard from "./atoms/ProjectCard";
 import Reveal from "./animation/Reveal";
 
-import stoneImg from "../assets/img/StoneWebsite.png";
-import portfolioImg from "../assets/img/PortfolioWebsite.png";
-
 const Projects = () => {
   const projects = [
     {
       title: "STONE - SpyWebsite",
       description:
         "School Project: Frontend design and development - Draw Whey icon to Dag's hand",
-      imgUrl: stoneImg,
+
       siteUrl: "https://folk.ntnu.no/madsab/STONE/website/index.html",
     },
     {
       title: "Porfolio - This site",
       description: "Personal portfolio to display me, my skills and projects",
-      imgUrl: portfolioImg,
+
       siteUrl: "#",
     },
   ];
