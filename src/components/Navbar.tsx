@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Reveal from "./animation/Reveal";
-import { BrowserRouter as Router } from "react-router-dom";
 
 import Link from "./atoms/Link";
 import MenuLinksContainer from "./organisms/MenuLinksContainer";
@@ -31,21 +30,19 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-30 w-full" style={navBarStyle}>
-      <Router>
-        <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
-          <nav className="grid grid-cols-5 py-4">
-            <Link
-              to="top"
-              className="text-3xl ml-5 font-bold col-span-3"
-              animation={false}
-            >
-              BARNES
-            </Link>
-            <MobileMenuContainer />
-            <MenuLinksContainer />
-          </nav>
-        </Reveal>
-      </Router>
+      <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
+        <nav className="grid grid-cols-5 py-4">
+          <Link
+            to="top"
+            className="text-3xl ml-5 font-bold col-span-3"
+            animation={false}
+          >
+            BARNES
+          </Link>
+          <MobileMenuContainer />
+          <MenuLinksContainer />
+        </nav>
+      </Reveal>
     </div>
   );
 };
