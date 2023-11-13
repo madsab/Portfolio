@@ -1,32 +1,21 @@
 import React from "react";
 import Reveal from "./animation/Reveal";
-import Button from "./atoms/Button";
+import SoMeContainer from "./organisms/SoMeContainer";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex items-center ml-7 ">
-      <div className="felx flex-col space-y-2">
+    <section className="min-h-screen flex items-center justify-center">
+      <div className="flex flex-col items-center">
         <Reveal>
-          <p className="text-9xl font-bold">Hello There!</p>
+          <p className="text-lg tracking-[0.6rem]">Mads Bårnes</p>
         </Reveal>
         <Reveal>
-          <p className="text-3xl">
-            I&apos;m Mads, a{" "}
-            <span className="text-theme-lightgray">Frontend Developer</span>
-          </p>
-        </Reveal>
-        <Reveal>
-          <p className="max-w-2xl">
-            Currently studying a 3 year bachelor degree in Computer science at
-            "Norwegian University of Science and Technology" in Trondheim. This
-            is a site showing of my skills and projects in software development.
-            If you&apos;d like to know more, please contact me.
-          </p>
-        </Reveal>
-        <Reveal>
-          <Button>
-            <span className="text-xl">I don&apos;t bite</span>
-          </Button>
+          <div className="flex space-x-4">
+            <p className="text-9xl font-bold underline text-theme-accent">
+              Hello
+            </p>
+            <p className="text-9xl font-bold">There!</p>
+          </div>
         </Reveal>
       </div>
     </section>
