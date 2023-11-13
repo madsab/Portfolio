@@ -57,7 +57,7 @@ const Reveal = ({
           bottom: 4,
           left: 0,
           right: 0,
-          background: "#222138",
+          background: "#B94341",
           borderRadius: "10px",
           zIndex: "20",
         }}
