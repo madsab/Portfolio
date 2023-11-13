@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import OfficeBG from "../assets/img/Bg_HomeOfficeRain.gif";
-import LaptopOutlinePC from "../assets/img/LaptopOutline_PCView.svg";
-import BoxOutlinePC from "../assets/img/Box-Outline.svg";
 import Reveal from "./animation/Reveal";
 
 import SkillWindow from "./organisms/SkillWindow";
