@@ -9,8 +9,12 @@ export type SoMeCardProps = {
 
 const SoMeCard: React.FC<SoMeCardProps> = ({ url, logo }) => {
   return (
-    <Link to={url} target="_blank" className="text-2xl cursor-pointer">
-      <Icon icon={logo} width="30" height="30" />
+    <Link
+      to={url}
+      target="_blank"
+      className="text-2xl rounded-full p-2 cursor-pointer  hover:bg-theme-secondary hover:text-theme-accent"
+    >
+      <Icon icon={logo} width="30" height="30" className="" />
     </Link>
   );
 };
