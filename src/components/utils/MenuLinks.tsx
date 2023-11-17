@@ -4,6 +4,10 @@ const MenuLinks = [
     to: "about",
   },
   {
+    label: "Skills",
+    to: "skills",
+  },
+  {
     label: "Projects",
     to: "projects",
   },
