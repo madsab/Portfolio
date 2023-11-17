@@ -7,6 +7,7 @@ interface Props {
   downwards?: boolean;
   slider?: boolean;
   delay?: number;
+  className?: string;
 }
 
 const Reveal = ({
@@ -15,6 +16,7 @@ const Reveal = ({
   downwards = false,
   slider = true,
   delay = 0.25,
+  className,
 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -30,7 +32,11 @@ const Reveal = ({
     }
   }, [isInView, mainController, slideController, slider]);
   return (
-    <div ref={ref} style={{ position: "relative", overflow: "hidden", width }}>
+    <div
+      ref={ref}
+      style={{ position: "relative", overflow: "hidden", width }}
+      className={className}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: downwards ? -75 : 75 },
