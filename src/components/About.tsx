@@ -6,26 +6,24 @@ import Button from "./atoms/Button";
 
 const About = () => {
   return (
-    <div className=" z-10 w-full min-h-screen bg-black flex items-center pr-8 justify-evenly">
-      <div className="z-10 flex w-[40%] pl-8">
+    <div
+      id="about"
+      className="w-full min-h-screen flex items-center justify-center font-bold bg-theme-bg bg-opacity-50 "
+    >
+      <div className="max-md:px-5 md:w-2/3">
         <Reveal>
-          <p className="text-3xl">
-            I&apos;m Mads, a{" "}
-            <span className="text-theme-lightgray">Frontend Developer</span>
+          <p className="text-8xl">
+            <span className="text-theme-accent">I&apos;m</span> Mads
           </p>
         </Reveal>
         <Reveal>
-          <p className="max-w-2xl">
-            Currently studying a 3 year bachelor degree in Computer science at
-            "Norwegian University of Science and Technology" in Trondheim. This
-            is a site showing of my skills and projects in software development.
-            If you&apos;d like to know more, please contact me.
+          <p className=" text-2xl md:text-3xl mt-4 ">
+            A Computer Science student at the Norwegian University of Science
+            and Technology (NTNU). Seeing myself as a{" "}
+            <span className="text-theme-accent">Fullstack</span> developer
+            focusing my spare time on making projects that makes me a little bit
+            more happy (<span className="text-theme-accent">Stupid Bugs</span>)
           </p>
-        </Reveal>
-        <Reveal>
-          <Button>
-            <span className="text-xl">I don&apos;t bite</span>
-          </Button>
         </Reveal>
       </div>
     </div>
