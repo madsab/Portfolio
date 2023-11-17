@@ -1,16 +1,43 @@
-import React from "react";
+import { Icon } from "@iconify/react";
+import { url } from "inspector";
+import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
-const SkillCard = ({ title, icon, alt }: any) => {
-  const iconSrc = icon ? icon : "";
+interface SkillCardProps {
+  number: number;
+  title: {
+    name: string;
+    icon: string;
+  };
+  skills?: { name: string; icon: string; alt: string; url: string }[];
+}
+const SkillCard: FC<SkillCardProps> = ({ ...props }) => {
   return (
-    <div className="relative w-32 inline-flex items-center justify-center m-3">
-      <div className=" relative bg-slate-950 flex flex-col items-center justify-center m-3 border-2 rounded-lg w-24 h-24 z-10 ">
-        <div className=" rounded-lg overflow-hidden drop-shadow-3d-white ">
-          <img src={iconSrc} alt={alt} width={45} />
-        </div>
-        <p>{title}</p>
+    <div className="px-4 my-8">
+      <p className="flex text-3xl items-center font-thin tracking-[1rem]">
+        {"0" + props.number}
+        <span className="ml-3">{props.title.name}</span>
+        <Icon icon={props.title.icon} className="text-theme-accent" />
+      </p>
+      <div className="p-2 flex flex-col items-start">
+        {props.skills &&
+          props.skills.map((skill, index) => (
+            <Link
+              key={index}
+              to={skill.url}
+              target="_blank"
+              className="flex items-center hover:scale-110 duration-200 ease-linear transform cursor-pointer text-xl font-semibold "
+            >
+              <Icon
+                icon={skill.icon}
+                width={20}
+                height={20}
+                className="text-theme-text mr-5"
+              />
+              {skill.name}
+            </Link>
+          ))}
       </div>
-      <div className="absolute top-3.5 left-5 w-24 h-24 bg-white rounded-lg"></div>
     </div>
   );
 };
