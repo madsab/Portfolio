@@ -3,8 +3,6 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import PopUp from "./components/animation/PopUp";
-import SifuCharacter from "./components/SifuCharacter";
 import About from "./components/About";
 import SoMeContainer from "./components/organisms/SoMeContainer";
 
