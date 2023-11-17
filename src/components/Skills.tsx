@@ -1,49 +1,47 @@
 import React, { useState } from "react";
 import Reveal from "./animation/Reveal";
-
-import SkillWindow from "./organisms/SkillWindow";
+import SkillCard from "./atoms/SkillCard";
+import { BackendSkills, FrontendSkills, OtherSkills } from "./utils/SkillLinks";
 
 const Skills = () => {
-  const [showSkill, setSkill] = useState(false);
-  const [showTech, setTech] = useState(false);
-
-  const showTechs = () => {
-    showTech ? setTech(false) : setTech(true);
-    setSkill(false);
-  };
-
-  const showSkills = () => {
-    setTech(false);
-    showSkill ? setSkill(false) : setSkill(true);
-  };
   return (
-    <div id="skills" className="flex flex-col items-center min-h-screen mb-10">
+    <div
+      id="skills"
+      className="flex flex-col items-center min-h-screen w-full "
+    >
       <Reveal>
-        <p className="text-6xl font-bold">Skills</p>
+        <p className="text-4xl font-bold mt-24">Skills</p>
       </Reveal>
-      <div className=" relative w-[90%] overflow-hidden">
+      <div className="flex flex-wrap w-full justify-evenly mt-10">
         <Reveal>
-          <div className=" relative border-2 rounded-xl overflow-hidden shadow-md shadow-black">
-            <p className="absolute top-[71%] left-[50%] animate-bounce ">
-              Click me!
-            </p>
-            <SkillWindow
-              headLine="My Programming Languages"
-              className="absolute w-[50%]  left-[27%] top-[20%]"
-              trigger={showSkill}
-              aquiredSkills={[]}
-            />
-
-            <p className="absolute top-[75%] left-[20%] animate-bounce ">
-              Click me!
-            </p>
-            <SkillWindow
-              headLine="Used Tech"
-              className="absolute w-[50%] left-2  top-[20%]"
-              trigger={showTech}
-              aquiredSkills={[]}
-            />
-          </div>
+          <SkillCard
+            number={1}
+            title={{
+              name: "Frontend",
+              icon: "icon-park-outline:code-computer",
+            }}
+            skills={FrontendSkills}
+          />
+        </Reveal>
+        <Reveal>
+          <SkillCard
+            number={2}
+            title={{
+              name: "Backend",
+              icon: "ion:terminal-outline",
+            }}
+            skills={BackendSkills}
+          />
+        </Reveal>
+        <Reveal>
+          <SkillCard
+            number={3}
+            title={{
+              name: "Other",
+              icon: "carbon:tools",
+            }}
+            skills={OtherSkills}
+          />
         </Reveal>
       </div>
     </div>
