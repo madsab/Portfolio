@@ -15,11 +15,14 @@ const FooterLink: FC<FooterLinkProps> = ({ ...props }) => {
       to={props.url}
       target="_blank"
       className={cn(
-        "w-fit hover:bg-theme-accent hover:text-black flex items-center space-x-2 hover:space-x-0 duration-400 transition-all ease-linear transform text-3xl font-semibold px-2",
+        "w-fit hover:bg-theme-accent rounded-sm group hover:text-black flex items-center duration-400 transition-all ease-linear transform text-3xl font-semibold px-2",
         props.className
       )}
     >
-      <Icon icon={"entypo:triangle-right"} />
+      <Icon
+        icon={"entypo:triangle-right"}
+        className="group-hover:text-black text-theme-accent group-hover:translate-x-2 duration-300"
+      />
       <p>{props.name}</p>
     </Link>
   );
