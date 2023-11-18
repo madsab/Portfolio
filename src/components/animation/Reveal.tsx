@@ -55,7 +55,7 @@ const Reveal = ({
         }}
         initial="hidden"
         animate={slideController}
-        transition={{ duration: 0.5, ease: "easeIn" }}
+        transition={{ duration: 0.5, ease: "easeIn", delay: delay }}
         style={{
           position: "absolute",
           display: slider ? "block" : "none",
