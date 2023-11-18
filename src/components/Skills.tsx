@@ -12,7 +12,7 @@ const Skills = () => {
       <Reveal>
         <p className="text-4xl font-bold mt-24">Skills</p>
       </Reveal>
-      <div className="flex flex-wrap w-full justify-evenly mt-10">
+      <div className="flex flex-wrap  w-full md:w-[90%] justify-evenly mt-10">
         <Reveal>
           <SkillCard
             number={1}
