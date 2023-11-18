@@ -23,7 +23,7 @@ const Skills = () => {
             skills={FrontendSkills}
           />
         </Reveal>
-        <Reveal>
+        <Reveal delay={0.5}>
           <SkillCard
             number={2}
             title={{
@@ -33,7 +33,7 @@ const Skills = () => {
             skills={BackendSkills}
           />
         </Reveal>
-        <Reveal>
+        <Reveal delay={0.75}>
           <SkillCard
             number={3}
             title={{
