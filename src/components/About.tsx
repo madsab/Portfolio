@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full min-h-screen flex items-center justify-center font-bold bg-theme-bg bg-opacity-50 "
+      className="w-screen h-screen flex items-center justify-center font-bold bg-theme-bg bg-opacity-50 snap-start "
     >
       <div className="max-md:px-5 md:w-2/3">
         <Reveal>

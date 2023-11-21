@@ -12,7 +12,7 @@ function App() {
   return (
     <div
       id="top"
-      className=" relative overflow-x-clip bg-gradient-to-b from-[#202020] text-theme-text w-full"
+      className="bg-gradient-to-b from-[#202020] text-theme-text w-screen h-screen overflow-auto snap-mandatory snap-y"
     >
       <Navbar />
       <SoMeContainer className="sticky top-[65%] h-1 ml-7 z-10 max-md:hidden" />

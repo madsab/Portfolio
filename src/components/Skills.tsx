@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import Reveal from "./animation/Reveal";
 import SkillCard from "./atoms/SkillCard";
 import { BackendSkills, FrontendSkills, OtherSkills } from "./utils/SkillLinks";
+import cn from "classnames";
 
 const Skills = () => {
   return (
     <div
       id="skills"
-      className="flex flex-col items-center min-h-screen w-full "
+      className={cn("flex flex-col items-center h-screen w-screen snap-start")}
     >
       <Reveal>
         <p className="text-4xl font-bold mt-24">Skills</p>

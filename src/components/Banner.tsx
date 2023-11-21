@@ -4,7 +4,7 @@ import SoMeContainer from "./organisms/SoMeContainer";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center">
+    <section className="h-screen w-screen flex items-center justify-center snap-start">
       <div className="flex flex-col items-center">
         <Reveal>
           <p className="text-lg tracking-[0.6rem]">Mads Bårnes</p>
