@@ -8,12 +8,22 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className=" w-screen h-screen flex flex-col items-center snap-start"
+      className=" w-screen flex flex-col items-center snap-start"
     >
-      <Reveal className="p-8">
-        <p className="text-5xl mb-3 font-bold">My Projects</p>
-      </Reveal>
-      <Carousel className="flex-grow-0" children={ProjectLinks} />
+      <div className=" snap-mandatory snap-y">
+        {ProjectLinks.map((project, index) => {
+          return (
+            <div className=" h-screen snap-start flex flex-col justify-center items-center">
+              {index == 0 && (
+                <Reveal className="p-8">
+                  <p className="text-5xl mb-3 font-bold">My Projects</p>
+                </Reveal>
+              )}
+              <ProjectCard key={index} {...project} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
