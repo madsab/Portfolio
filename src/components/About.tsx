@@ -1,8 +1,4 @@
-import React from "react";
 import Reveal from "./animation/Reveal";
-
-import CVPhoto from "../assets/img/CvPhoto.jpg";
-import Button from "./atoms/Button";
 
 const About = () => {
   return (

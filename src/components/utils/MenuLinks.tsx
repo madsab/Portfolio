@@ -13,7 +13,7 @@ const MenuLinks = [
   },
   {
     label: "Contact",
-    to: "contact",
+    to: "footer",
   },
 ];
 

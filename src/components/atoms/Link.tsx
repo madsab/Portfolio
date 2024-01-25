@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link as LinkReact } from "react-scroll";
 import cn from "classnames";
 

@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer
-      id="contact"
+      id="footer"
       className="w-screen min-h-[325px] bg-[#131313] grid grid-cols-4 snap-start max-md:flex max-md:flex-col "
     >
       <div className="col-start-2 col-span-2 mx-3 my-11 max-md:px-5">
