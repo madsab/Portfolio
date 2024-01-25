@@ -1,14 +1,15 @@
 import { FC, ReactNode, useState } from "react";
 import ProjectCard, { ProjectCardProps } from "../atoms/ProjectCard";
+import cn from "classnames";
 interface CarouselProps {
   children: ProjectCardProps[];
+  className?: string;
 }
 
-const Carousel: FC<CarouselProps> = ({ children }) => {
+const Carousel: FC<CarouselProps> = ({ children, className }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const updateIndex = (newIndex: number) => {
-    console.log(newIndex);
+  const updateIndex = (newIndex: number, element: HTMLHRElement) => {
     if (newIndex < 0) {
       newIndex = 0;
     } else if (newIndex > children.length) {
@@ -17,32 +18,50 @@ const Carousel: FC<CarouselProps> = ({ children }) => {
     setActiveIndex(newIndex);
   };
   return (
-    <div className="w-full overflow-y-hidden flex justify-center border-2 px-5 max-h-[490px]">
-      <div className="absolute bottom-36 left-24">
-        <p className="text-8xl ml-12 font-light">0{activeIndex + 1}</p>
+    <div
+      className={cn(
+        "relative w-full overflow-y-hidden flex justify-center p-2",
+        className
+      )}
+    >
+      {/* <div className="flex flex-col justify-center pt-24 border-2 ">
+        <p className="text-8xl font-light">0{activeIndex + 1}</p>
         <div className="border-b-[1px] w-[160px]"></div>
-      </div>
+      </div> */}
       <div
-        className={` -translate-y-[${
-          activeIndex * 450
-        }px] transform overflow-y-scroll transition duration-200 flex flex-col justify-start pt-5 px-3 items-end space-y-8 ml-28 `}
+        className={
+          "w-full overflow-auto snap-mandatory snap-y scrollbar-hide flex justify-center border-2"
+        }
       >
-        {children.map((child, index) => {
-          return <ProjectCard key={index} {...child} />;
-        })}
-      </div>
-      <div className="flex flex-col justify-center ml-10">
-        <div>
+        <div className="translate-y-1/4 border-2">
           {children.map((child, index) => {
             return (
-              <hr
-                onClick={() => updateIndex(index)}
-                className="bg-white rounded-lg hover:opacity-80 opacity-50 w-10 h-1 m-2 hover:cursor-pointer"
+              <ProjectCard
+                className="snap-center m-auto"
+                key={index}
+                {...child}
               />
             );
           })}
         </div>
       </div>
+      {/* <div className="flex flex-col justify-center border-2">
+        <div className="w-full">
+          {children.map((child, index) => {
+            return (
+              <hr
+                key={index}
+                data-index={index}
+                onClick={(e) => updateIndex(index, e.currentTarget)}
+                className={cn(
+                  "bg-white rounded-lg hover:opacity-80 opacity-50 w-10 h-1 m-2 hover:cursor-pointer hover:w-16 transition-all duration-200 box-content",
+                  activeIndex == index ? "w-16" : "w-10"
+                )}
+              />
+            );
+          })}
+        </div>
+      </div> */}
     </div>
   );
 };
