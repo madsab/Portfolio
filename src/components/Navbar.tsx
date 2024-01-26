@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./atoms/Button";
 import Reveal from "./animation/Reveal";
-import { BrowserRouter as Router } from "react-router-dom";
 
 import githubLogo from "../assets/img/Github_logo_white.svg";
 import linkdnLogo from "../assets/img/Linkdn_logo.png";
@@ -34,37 +33,35 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 pr-6 pl-6 z-30 " style={navBarStyle}>
-      <Router>
-        <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
-          <nav className="flex h-20 items-center">
-            <div className="grow flex space-x-10 items-center ml-4">
-              <Link to="top" background="bg-slate-200">
-                <img src={SifuIcon} alt="Sifu face" width={50} height={50} />
-              </Link>
-              <Link to="about">About</Link>
-              <Link to="skills">Skills</Link>
-              <Link to="projects">Projects</Link>
-            </div>
-            <div className="grow flex justify-end space-x-4">
-              <Icon
-                src={githubLogo}
-                alt="Github logo"
-                link="https://github.com/madsab"
-              />
-              <Icon
-                src={linkdnLogo}
-                alt="Linkdn logo"
-                link="https://www.linkedin.com/in/mads-b%C3%A5rnes-a66b96272/"
-              />
-              <Button>
-                <span className="text-2xl">
-                  <a href="mailto:mads.barnes@hotmail.com">Contact Me</a>
-                </span>
-              </Button>
-            </div>
-          </nav>
-        </Reveal>
-      </Router>
+      <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
+        <nav className="flex h-20 items-center">
+          <div className="grow flex space-x-10 items-center ml-4">
+            <Link to="top" background="bg-slate-200">
+              <img src={SifuIcon} alt="Sifu face" width={50} height={50} />
+            </Link>
+            <Link to="about">About</Link>
+            <Link to="skills">Skills</Link>
+            <Link to="projects">Projects</Link>
+          </div>
+          <div className="grow flex justify-end space-x-4">
+            <Icon
+              src={githubLogo}
+              alt="Github logo"
+              link="https://github.com/madsab"
+            />
+            <Icon
+              src={linkdnLogo}
+              alt="Linkdn logo"
+              link="https://www.linkedin.com/in/mads-b%C3%A5rnes-a66b96272/"
+            />
+            <Button>
+              <span className="text-2xl">
+                <a href="mailto:mads.barnes@hotmail.com">Contact Me</a>
+              </span>
+            </Button>
+          </div>
+        </nav>
+      </Reveal>
     </div>
   );
 };
