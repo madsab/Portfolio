@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Link as LinkReact } from "react-scroll";
 import cn from "classnames";
+import React from "react";
 
 interface LinkProps {
   to: string;

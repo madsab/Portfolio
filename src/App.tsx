@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import IndexPage from "./pages/indexPage";
+import IndexPage from "./pages/IndexPage";
 import CV from "./pages/CV";
+import React from "react";
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 import ProjectCard from "./atoms/ProjectCard";
 import Reveal from "./animation/Reveal";
 import { ProjectLinks } from "./utils/ProjectLinks";
+import React from "react";
 
 const Projects = () => {
   return (
