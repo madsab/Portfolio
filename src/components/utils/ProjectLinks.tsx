@@ -1,5 +1,4 @@
 import StoneImg from "../../assets/images/stone.png";
-import Dredge from "../../assets/images/Dredge_06.jpeg";
 import Portfolio from "../../assets/images/portfolio.png";
 import { ProjectCardProps } from "../atoms/ProjectCard";
 

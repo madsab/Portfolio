@@ -1,8 +1,7 @@
-import { on } from "events";
 import FooterLink from "./atoms/FooterLink";
-import Link from "./atoms/Link";
 import { FooterLinks } from "./utils/FooterLinks";
 import cn from "classnames";
+import React from "react";
 
 const Footer = () => {
   const FooterLinksLeft = FooterLinks.slice(0, FooterLinks.length / 2);

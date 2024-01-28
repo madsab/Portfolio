@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React from "react";
 import Reveal from "./animation/Reveal";
 import SkillCard from "./atoms/SkillCard";
 import { BackendSkills, FrontendSkills, OtherSkills } from "./utils/SkillLinks";
