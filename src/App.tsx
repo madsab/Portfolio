@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import IndexPage from "./pages/IndexPage";
-import CV from "./pages/CV";
 import React from "react";
+import CV from "./pages/CV";
+import IndexPage from "./pages/IndexPage";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +12,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
