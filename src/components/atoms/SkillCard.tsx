@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import { url } from "inspector";
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 

@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import cn from "classnames";
+import React from "react";
 
 interface FooterLinkProps {
   name: string;

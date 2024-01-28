@@ -1,6 +1,5 @@
 import React from "react";
 import Reveal from "./animation/Reveal";
-import SoMeContainer from "./organisms/SoMeContainer";
 
 const Banner = () => {
   return (

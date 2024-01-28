@@ -1,8 +1,5 @@
 import React, { FC } from "react";
-import Reveal from "../animation/Reveal";
-import { title } from "process";
 import { Icon } from "@iconify/react";
-import { JsxElement } from "typescript";
 import { Link } from "react-router-dom";
 import cn from "classnames";
 
