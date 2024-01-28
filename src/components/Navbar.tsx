@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-30 w-full" style={navBarStyle}>
+    <div className="sticky top-0 h-1 z-30 w-full" style={navBarStyle}>
       <Reveal downwards={true} slider={false} width="100%" delay={0.5}>
         <nav className="grid grid-cols-5 py-4">
           <Link
