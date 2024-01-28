@@ -22,7 +22,6 @@ const Navbar = () => {
   }, []);
 
   const navBarStyle = {
-    backgroundColor: scrolling ? "black" : "transparent",
     opacity: "0.85",
     transition: "0.5s ease-in-out",
     paddingTop: scrolling ? 0 : 10,
