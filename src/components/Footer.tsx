@@ -16,7 +16,7 @@ const Footer = () => {
       className="w-screen min-h-[325px] bg-[#131313] grid grid-cols-4 snap-start max-md:flex max-md:flex-col "
     >
       <div className="col-start-2 col-span-2 mx-3 my-11 max-md:px-5">
-        <p className="text-3xl tracking-[1rem] mb-4">Connect</p>
+        <p className="text-3xl tracking-[0.5rem] mb-4">Connect</p>
         <div className="flex max-sm:flex-col">
           <div className="flex-1 space-y-4">
             {FooterLinksLeft.map((link, index) => (

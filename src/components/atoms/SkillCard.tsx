@@ -13,7 +13,7 @@ interface SkillCardProps {
 const SkillCard: FC<SkillCardProps> = ({ ...props }) => {
   return (
     <div className="px-4 my-8">
-      <p className="flex text-3xl items-center font-thin tracking-[1rem]">
+      <p className="flex text-3xl items-center font-thin tracking-[0.5rem]">
         {"0" + props.number}
         <span className="ml-3">{props.title.name}</span>
         <Icon icon={props.title.icon} className="text-theme-accent" />
