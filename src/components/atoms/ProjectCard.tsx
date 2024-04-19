@@ -18,29 +18,34 @@ export interface ProjectCardProps {
 const ProjectCard: FC<ProjectCardProps> = ({ border = false, ...props }) => {
   const dot = <Icon icon="mdi:circle-medium" />;
   return (
-    <div className={cn(" max-w-[850px] relative", props.className)}>
+    <div
+      className={cn(
+        "w-full mx-5 relative flex flex-col items-center",
+        props.className
+      )}
+    >
+      <p className="z-20 sm:absolute text-3xl sm:text-5xl md:text-6xl lg:text-7xl bottom-[28%] max-md:left-[5%] left-[10%] transition-all font-extrabold ">
+        {props.title}
+      </p>
       <Link to={props.siteUrl} target="_blank">
         <img
           src={props.image}
           alt={props.imageAlt}
           className={cn(
-            "rounded-3xl w-full object-cover cursor-pointer hover:scale-105 hover:mb-3 transition-all duration-200 ease-linear",
+            "mx-auto rounded-3xl w-2/3 max-md:w-4/5 object-cover cursor-pointer hover:scale-105 hover:mb-3 transition-all duration-200 ease-linear",
             border && "border-2 border-slate-500"
           )}
         />
       </Link>
-      <p className="absolute text-7xl bottom-[40%] -left-20 font-extrabold h-0">
-        {props.title}
-      </p>
-      <div className="flex flex-col items-center justify-center font-light">
-        <div className="flex items-center">
+      <div className="flex flex-col items-center justify-center mx-auto font-light max-sm:w-2/3 ">
+        <div className="flex items-center justify-center max-sm:flex-wrap">
           {props.title}
           {dot}
           {props.description}
           {dot}
           {props.languages}
         </div>
-        <div className=" text-slate-400">{props.extra}</div>
+        <p className="text-slate-400 text-center">{props.extra}</p>
       </div>
     </div>
   );
