@@ -1,5 +1,6 @@
 import StoneImg from "../../assets/images/stone.png";
 import Portfolio from "../../assets/images/portfolio.png";
+import Cinematrix from "../../assets/images/cinematrix.png";
 import { ProjectCardProps } from "../atoms/ProjectCard";
 
 export const ProjectLinks: ProjectCardProps[] = [
@@ -23,5 +24,15 @@ export const ProjectLinks: ProjectCardProps[] = [
     image: Portfolio,
     imageAlt: "Portfolio Website",
     border: true,
+  },
+  {
+    title: "Cinematrix",
+    description: "Frontend & Backend",
+    languages: "Next.js, TailwindCSS, Firebase",
+    siteUrl: "https://cinematrix.madsbarnes.com",
+    githubUrl: "https://github.com/madsab/cinematrix",
+    image: Cinematrix,
+    imageAlt: "Cinematrix Website",
+    border: false,
   },
 ];
