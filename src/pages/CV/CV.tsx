@@ -3,7 +3,7 @@ import { Side } from "./components/Side"
 
 const CV = () => {
   return (
-    <article className="m-auto flex max-w-5xl border-white border">
+    <article className="m-auto flex max-w-5xl">
       <Main />
       <Side />
     </article>
