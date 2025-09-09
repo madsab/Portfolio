@@ -1,15 +1,15 @@
-import { FC } from "react";
-import { Link as LinkReact } from "react-scroll";
-import cn from "classnames";
-import React from "react";
+import cn from "classnames"
+import { FC } from "react"
+import { Link as LinkReact } from "react-scroll"
 
 interface LinkProps {
-  to: string;
-  children: JSX.Element | string;
-  className?: string;
-  animation?: boolean;
+  to: string
+  children: JSX.Element | string
+  onClick?: () => void
+  className?: string
+  animation?: boolean
 }
-const Link: FC<LinkProps> = ({ to, animation = true, children, className }) => {
+const Link: FC<LinkProps> = ({ to, animation = true, children, className, onClick }) => {
   return (
     <LinkReact
       to={to}
@@ -18,13 +18,14 @@ const Link: FC<LinkProps> = ({ to, animation = true, children, className }) => {
       smooth={true}
       duration={500}
       className={cn("cursor-pointer group transition duration-300", className)}
+      onClick={onClick}
     >
       {children}
       {animation && (
         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-theme-text"></span>
       )}
     </LinkReact>
-  );
-};
+  )
+}
 
-export default Link;
+export default Link

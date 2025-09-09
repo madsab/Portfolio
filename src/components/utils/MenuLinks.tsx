@@ -15,6 +15,6 @@ const MenuLinks = [
     label: "Contact",
     to: "footer",
   },
-];
+]
 
-export default MenuLinks;
+export default MenuLinks

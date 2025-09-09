@@ -1,7 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
-import CV from "./pages/CV";
-import IndexPage from "./pages/IndexPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import CV from "./pages/CV/CV"
+import IndexPage from "./pages/Index/IndexPage"
 
 const App = () => {
   return (
@@ -11,7 +10,7 @@ const App = () => {
         <Route path="cv" element={<CV />} />
       </Routes>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App
