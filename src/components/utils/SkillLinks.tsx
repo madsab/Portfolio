@@ -29,7 +29,13 @@ export const FrontendSkills = [
     alt: "TypeScript logo",
     url: "https://www.typescriptlang.org/",
   },
-];
+  {
+    name: "JavaScript",
+    icon: "simple-icons:javascript",
+    alt: "JavaScript logo",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+]
 
 export const BackendSkills = [
   {
@@ -37,12 +43,6 @@ export const BackendSkills = [
     icon: "simple-icons:nextdotjs",
     alt: "NodeJS logo",
     url: "https://nextjs.org/",
-  },
-  {
-    name: "AWS",
-    icon: "simple-icons:amazonaws",
-    alt: "AWS logo",
-    url: "https://aws.amazon.com/",
   },
   {
     name: "Java",
@@ -56,7 +56,19 @@ export const BackendSkills = [
     alt: "Python logo",
     url: "https://www.python.org/",
   },
-];
+  {
+    name: "Django",
+    icon: "simple-icons:django",
+    alt: "Django logo",
+    url: "https://www.djangoproject.com/",
+  },
+  {
+    name: "Microsoft .NET",
+    icon: "simple-icons:dotnet",
+    alt: ".NET logo",
+    url: "https://dotnet.microsoft.com/",
+  },
+]
 
 export const OtherSkills = [
   {
@@ -71,4 +83,34 @@ export const OtherSkills = [
     alt: "Figma logo",
     url: "https://www.figma.com/",
   },
-];
+  {
+    name: "AWS",
+    icon: "simple-icons:amazonaws",
+    alt: "AWS logo",
+    url: "https://aws.amazon.com/",
+  },
+  {
+    name: "Docker",
+    icon: "simple-icons:docker",
+    alt: "Docker logo",
+    url: "https://www.docker.com/",
+  },
+  {
+    name: "Microsoft Azure",
+    icon: "simple-icons:microsoftazure",
+    alt: "Microsoft Azure logo",
+    url: "https://azure.microsoft.com/",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "simple-icons:postgresql",
+    alt: "PostgreSQL logo",
+    url: "https://www.postgresql.org/",
+  },
+  {
+    name: "MySQL",
+    icon: "simple-icons:mysql",
+    alt: "MySQL logo",
+    url: "https://www.mysql.com/",
+  },
+]
