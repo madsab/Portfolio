@@ -20,7 +20,8 @@ export const Jobs: Job[] = [
     startDate: "Feb 2024",
     endDate: null,
     description:
-      "IT-brukerstøtte for studenter ved NTNU. Innebærer blant annet arbeidsoppgaver som programvare-hjelp og NTNU-konto problemer.",
+      "IT-brukerstøtte for studenter ved NTNU. Arbeisoppgaver innebærer hjelp med ulik programvare, kontoer og nettverk. Internt medlem av fagruppe utvkiling. Jobber med å utvikle internsidene til orakeltjenesten.",
+    technologies: ["React", "TypeScript", "Python", "Django", "Docker"],
   },
   {
     id: 3,
