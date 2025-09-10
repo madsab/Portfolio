@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, className }) => {
         </button>
       </div>
       <aside
-        className={`fixed top-0 right-0 w-full h-screen shadow-md box-border overflow-y-scroll transition-transform transform ${
+        className={`fixed top-0 right-0 h-screen shadow-md box-border overflow-y-scroll transition-transform transform ${
           isOpen ? "translate-x-0 mr-10" : "translate-x-full"
         } w-4/5`}
       >

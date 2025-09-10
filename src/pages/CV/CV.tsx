@@ -4,12 +4,12 @@ import { Side } from "./components/Side"
 
 const CV = () => {
   return (
-    <article className="m-auto flex max-w-5xl">
+    <article className="md:m-auto flex max-w-5xl">
       <Main />
       <Sidebar className="md:hidden">
         <Side />
       </Sidebar>
-      <Side className="max-sm:hidden" />
+      <Side className="max-md:hidden" />
     </article>
   )
 }
