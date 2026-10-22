@@ -1,9 +1,25 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --color-theme-bg: #070303;
+  --color-theme-text: #F6F1DF;
+  --color-theme-accent: #B94341;
+  --color-theme-primary: #761614;
+  --color-theme-secondary: #220C0C;
+  --animate-slider: slide 20s linear infinite;
+  --shadow-3xl: 5px 5px 20px 5px rgba(50, 50, 50, 0.5);
+}
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
 body {
   margin: 0;
   height: 100%;
